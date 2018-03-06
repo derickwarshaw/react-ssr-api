@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:seed": "rm -f ./db/*.sqlite && ./node_modules/.bin/sequelize db:migrate && ./node_modules/.bin/sequelize db:seed:all",
+    "dev:server": "nodemon index.js",
+    "dev": "run-s dev:*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "csurf": "^1.9.0",
+    "express": "^4.16.2",
+    "jwt-csrf": "^4.1.0",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^4.13.9",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.5.2",
+    "nodemon": "^1.14.11",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.32.7",
+    "sequelize-cli": "^3.2.0",
+    "sqlite3": "^3.1.13"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
+  }
+}
